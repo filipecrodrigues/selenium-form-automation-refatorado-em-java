@@ -21,6 +21,38 @@ Projeto de automação para preenchimento de formulários Google usando **Java 2
 - **WebDriver Manager 5.9.2** - Gerenciamento automático de drivers
 - **SLF4J 2.0.16 + Logback 1.5.8** - Sistema de logging
 
+  ## 📊 Fluxograma
+
+```mermaid
+flowchart TD
+    A[🚀 Início] --> B[📋 Carregar Lista de Alunos]
+    B --> C[🌐 Abrir Navegador Chrome]
+    
+    C --> D{📝 Há mais alunos?}
+    
+    D -->|Sim| E[🔗 Acessar Formulário Google]
+    E --> F[✍️ Preencher Nome e CPF]
+    F --> G[📤 Enviar Formulário]
+    G --> H[✅ Registrar no Log]
+    H --> I[🔄 Preparar Próxima Resposta]
+    I --> D
+    
+    D -->|Não| J[❌ Fechar Navegador]
+    J --> K[🏁 Fim]
+    
+    F -.->|Erro| L[⚠️ Registrar Erro]
+    L -.-> D
+    
+    style A fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#fff
+    style K fill:#F44336,stroke:#C62828,stroke-width:3px,color:#fff
+    style D fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#fff
+    style E fill:#FF9800,stroke:#E65100,stroke-width:2px,color:#fff
+    style F fill:#FF9800,stroke:#E65100,stroke-width:2px,color:#fff
+    style G fill:#FF9800,stroke:#E65100,stroke-width:2px,color:#fff
+    style H fill:#9C27B0,stroke:#6A1B9A,stroke-width:2px,color:#fff
+    style L fill:#FFC107,stroke:#F57F17,stroke-width:2px,color:#000
+```
+
 ## ✅ Pré-requisitos
 
 - ☕ **Java 21** ou superior ([Download](https://www.oracle.com/java/technologies/downloads/))
