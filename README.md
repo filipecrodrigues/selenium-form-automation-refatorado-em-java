@@ -75,9 +75,10 @@ formulario-selenium/
 │   │   ├── java/
 │   │   │   └── com/
 │   │   │       └── automacao/
-│   │   │           ├── FormularioAutomation.java    # Classe principal
-│   │   │           └── model/
-│   │   │               └── Aluno.java               # Record do aluno
+|                   ├── model/
+│   │   │           |    └── Aluno.java               # Record do aluno
+│   │   │           └── FormularioAutomation.java    # Classe principal
+│   │   │           
 │   │   └── resources/
 │   │       └── logback.xml                          # Configuração de logs
 ├── target/                                          # Arquivos compilados (gerado)
@@ -220,7 +221,7 @@ Edite `logback.xml` para alterar o nível de detalhamento:
 </root>
 ```
 
-## 🐛 Solução de Problemas
+##  Solução de Problemas
 
 ### Erro: ChromeDriver não encontrado
 **Solução:** O WebDriver Manager baixa automaticamente. Verifique sua conexão com a internet.
@@ -264,9 +265,7 @@ mvn versions:display-dependency-updates
 4. Push para a branch (`git push origin feature/MinhaFeature`)
 5. Abra um Pull Request
 
-## 📄 Licença
 
-Este projeto é de código aberto para fins educacionais.
 
 ## ✨ Melhorias Futuras
 
@@ -285,3 +284,7 @@ Para dúvidas ou sugestões, abra uma issue no repositório.
 ---
 
 **Desenvolvido com ☕ e Java 21**
+## 📄 Licença
+
+Este projeto é de código aberto para fins educacionais.
+
